@@ -10,6 +10,6 @@ def report(request):
     if request.method == 'POST':
         asset_data = request.POST.get('asset_data')
         print(asset_data)
-        return HttpResponse('成功收到数据！')
+        return HttpResponse(u'成功收到数据！')
     else:
-        return HttpResponse('只能使用 POST 方法')
+        return HttpResponse(u'只能使用 POST 方法')
