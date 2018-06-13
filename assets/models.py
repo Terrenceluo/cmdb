@@ -90,17 +90,17 @@ class Server(models.Model):
         return '%s--%s--%s <sn:%s>' % (self.asset.name, self.get_sub_asset_type_display(), self.model, self.asset.sn)
 
     class Meta:
-        verbose_name = u'服务器'
-        verbose_name_plural = u'服务器'
+        verbose_name = _('Server')  # 服务器
+        verbose_name_plural = _('Server')  # 服务器
 
 
 class SecurityDevice(models.Model):
     """    安全设备    """
     sub_asset_type_choice = (
-        (0, u'防火墙'),
-        (1, u'入侵检测设备'),
-        (2, u'互联网网关'),
-        (4, u'运维审计系统'),
+        (0, _('Fire wall')),  # 防火墙
+        (1, _('Intrusion detection device')),  # 入侵检测设备
+        (2, _('Internet gateway')),  # 互联网网关
+        (4, _('SSA')),  # 运维审计系统
     )
 
     asset = models.OneToOneField('Asset')
