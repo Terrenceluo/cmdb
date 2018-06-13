@@ -3,82 +3,88 @@ from __future__ import unicode_literals
 
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 
 class Asset(models.Model):
     """    所有资产的共有数据表    """
     asset_type_choice = (
-        ('server', u'服务器'),
-        ('networkdevice', u'网络设备'),
-        ('storagedevice', u'存储设备'),
-        ('securitydevice', u'安全设备'),
+        ('server', _('Server')),  # 服务器
+        ('networkdevice', _('Network device')),  # 网络设备
+        ('storagedevice', _('Storage device')),  # 存储设备
+        ('securitydevice', _('Security device')),  # 安全设备
         ('software', u'软件资产'),
     )
 
     asset_status = (
-        (0, u'在线'),
-        (1, u'下线'),
-        (2, u'未知'),
-        (3, u'故障'),
-        (4, u'备用'),
+        (0, _('Online')),  # 在线
+        (1, _('Offline')),  # 下线
+        (2, _('Unknown')),  # 未知
+        (3, _('Breakdown')),  # 故障
+        (4, _('Spare')),  # 备用
     )
 
-    asset_type = models.CharField(choices=asset_type_choice, max_length=64, default='server', verbose_name=u'资产类型')
-    name = models.CharField(max_length=64, unique=True, verbose_name=u'资产名称')
-    sn = models.CharField(max_length=128, unique=True, verbose_name=u'资产序列号')
-    business_unit = models.ForeignKey('BusinessUnit', null=True, blank=True, verbose_name=u'所属业务线')
-    status = models.SmallIntegerField(choices=asset_status, default=0, verbose_name=u'设备状态')
+    asset_type = models.CharField(choices=asset_type_choice, max_length=64, default='server',
+                                  verbose_name=_('Asset type'))  # 资产类型
+    name = models.CharField(max_length=64, unique=True, verbose_name=_('Asset name'))  # 资产名称
+    sn = models.CharField(max_length=128, unique=True, verbose_name=_('Asset serial number'))  # 资产序列号
+    business_unit = models.ForeignKey('BusinessUnit', null=True, blank=True, verbose_name=_('Business unit'))  # 所属业务线
+    status = models.SmallIntegerField(choices=asset_status, default=0, verbose_name=_('Equipment status'))  # 设备状态
 
-    manufacturer = models.ForeignKey('Manufacturer', null=True, blank=True, verbose_name=u'制造商')
-    manage_ip = models.GenericIPAddressField(null=True, blank=True, verbose_name=u'管理IP')
-    tags = models.ManyToManyField('Tag', blank=True, verbose_name=u'标签')
-    admin = models.ForeignKey(User, null=True, blank=True, verbose_name=u'资产管理员', related_name='admin')
-    idc = models.ForeignKey('IDC', null=True, blank=True, verbose_name=u'所在机房')
-    contract = models.ForeignKey('Contract', null=True, blank=True, verbose_name=u'合同')
+    manufacturer = models.ForeignKey('Manufacturer', null=True, blank=True, verbose_name=_('Manufacturer'))  # 制造商
+    manage_ip = models.GenericIPAddressField(null=True, blank=True, verbose_name=_('Manage IP'))  # 管理IP
+    tags = models.ManyToManyField('Tag', blank=True, verbose_name=_('Tag'))  # 标签
+    admin = models.ForeignKey(User, null=True, blank=True, verbose_name=_('Asset admin'), related_name='admin')  # 资产管理员
+    idc = models.ForeignKey('IDC', null=True, blank=True, verbose_name=_('IDC'))  # 所在机房
+    contract = models.ForeignKey('Contract', null=True, blank=True, verbose_name=_('Contract'))  # 合同
 
-    purchase_day = models.DateField(null=True, blank=True, verbose_name=u'购买日期')
-    expire_day = models.DateField(null=True, blank=True, verbose_name=u'过保日期')
-    price = models.FloatField(null=True, blank=True, verbose_name=u'价格')
+    purchase_day = models.DateField(null=True, blank=True, verbose_name=_('Purchase day'))  # 购买日期
+    expire_day = models.DateField(null=True, blank=True, verbose_name=_('Expire day'))  # 过保日期
+    price = models.FloatField(null=True, blank=True, verbose_name=_('Price'))  # 价格
 
-    approved_by = models.ForeignKey(User, null=True, blank=True, verbose_name=u'批准人', related_name='approved_by')
+    approved_by = models.ForeignKey(User, null=True, blank=True, verbose_name=_('Approver'),
+                                    related_name='approved_by')  # 批准人
 
-    memo = models.TextField(null=True, blank=True, verbose_name=u'备注')
-    c_time = models.DateTimeField(auto_now_add=True, verbose_name=u'批准日期')
-    m_time = models.DateTimeField(auto_now=True, verbose_name=u'更新日期')
+    memo = models.TextField(null=True, blank=True, verbose_name=_('Memo'))  # 备注
+    c_time = models.DateTimeField(auto_now_add=True, verbose_name=_('Approval date'))  # 批准日期
+    m_time = models.DateTimeField(auto_now=True, verbose_name=_('Modify date'))  # 更新日期
 
     def __unicode__(self):
         return '<%s>  %s' % (self.get_asset_type_display(), self.name)
 
     class Meta:
-        verbose_name = u'资产总表'
-        verbose_name_plural = u'资产总表'
+        verbose_name = _('Asset summary statement')  # 资产总表
+        verbose_name_plural = _('Asset summary statement')  # 资产总表
         ordering = ['-c_time']
 
 
 class Server(models.Model):
     """    服务器设备    """
     sub_asset_type_choice = (
-        (0, u'PC服务器'),
-        (1, u'刀片机'),
-        (2, u'小型机'),
+        (0, _('PC Server')),  # PC服务器
+        (1, _('Blade')),  # 刀片机
+        (2, _('Minicomputer')),  # 小型机
     )
 
     created_by_choice = (
-        ('auto', u'自动添加'),
-        ('manual', u'手工录入'),
+        ('auto', _('Automatically add')),  # 自动添加
+        ('manual', _('Manual input')),  # 手工录入
     )
 
     asset = models.OneToOneField('Asset')
-    sub_asset_type = models.SmallIntegerField(choices=sub_asset_type_choice, default=0, verbose_name=u'服务器类型')
-    created_by = models.CharField(choices=created_by_choice, max_length=32, default='auto', verbose_name=u'添加方式')
+    sub_asset_type = models.SmallIntegerField(choices=sub_asset_type_choice, default=0,
+                                              verbose_name=_('Server type'))  # 服务器类型
+    created_by = models.CharField(choices=created_by_choice, max_length=32, default='auto',
+                                  verbose_name=_('Add mode'))  # 添加方式
     # 虚拟机专用字段
-    hosted_on = models.ForeignKey('self', related_name='hosted_on_server', blank=True, null=True, verbose_name=u'宿主机')
-    model = models.CharField(max_length=128, null=True, blank=True, verbose_name=u'服务器型号')
-    raid_type = models.CharField(max_length=512, blank=True, null=True, verbose_name=u'Raid类型')
+    hosted_on = models.ForeignKey('self', related_name='hosted_on_server', blank=True, null=True,
+                                  verbose_name=_('Host'))  # 宿主机
+    model = models.CharField(max_length=128, null=True, blank=True, verbose_name=_('Server model'))  # 服务器型号
+    raid_type = models.CharField(max_length=512, blank=True, null=True, verbose_name=_('Raid type'))  # Raid类型
 
-    os_type = models.CharField(max_length=64, blank=True, null=True, verbose_name=u'操作系统类型')
-    os_distribution = models.CharField(max_length=64, blank=True, null=True, verbose_name=u'发行版本')
-    os_release = models.CharField(max_length=64, blank=True, null=True, verbose_name=u'操作系统版本')
+    os_type = models.CharField(max_length=64, blank=True, null=True, verbose_name=_('OS type'))  # 操作系统类型
+    os_distribution = models.CharField(max_length=64, blank=True, null=True, verbose_name=_('OS distribution'))  # 发行版本
+    os_release = models.CharField(max_length=64, blank=True, null=True, verbose_name=_('OS release'))  # 操作系统版本
 
     def __unicode__(self):
         return '%s--%s--%s <sn:%s>' % (self.asset.name, self.get_sub_asset_type_display(), self.model, self.asset.sn)
