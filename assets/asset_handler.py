@@ -13,14 +13,14 @@ def log(log_type, msg=None, asset=None, new_asset=None, request=None):
     """
     event = models.EventLog()
     if log_type == 'upline':
-        event.name = '%s <%s> ：  %s' % (asset.name, asset.sn, _('upline'))
+        event.name = '%s <%s> :  %s' % (asset.name, asset.sn, _('upline'))
         event.asset = asset
         event.detail = _('Asset upline successfully')
         event.user = request.user
-    elif log_type == "approve_failed":
-        event.name = '%s <%s> ：  %s' % (new_asset.asset_type, new_asset.sn, _('Failure to approve'))
+    elif log_type == 'approve_failed':
+        event.name = '%s <%s> :  %s' % (new_asset.asset_type, new_asset.sn, _('Failure to approve'))
         event.new_asset = new_asset
-        event.detail = '%s！\n%s' % (msg, _('Failure to approve'))
+        event.detail = '%s!\n%s' % (msg, _('Failure to approve'))
         event.user = request.user
     # 更多日志类型.....
     event.save()
@@ -33,7 +33,7 @@ class ApproveAsset(object):
     def __init__(self, request, asset_id):
         self.request = request
         self.new_asset = models.NewAssetApprovalZone.objects.get(id=asset_id)
-        self.data = self.new_asset.data
+        self.data = json.loads(self.new_asset.data)
 
     def asset_upline(self):
         # 为以后的其它类型资产扩展留下接口
@@ -70,7 +70,7 @@ class ApproveAsset(object):
         """
         # 利用request.user自动获取当前管理人员的信息，作为审批人添加到资产数据中。
         asset = models.Asset.objects.create(asset_type=self.new_asset.asset_type,
-                                            name="%s: %s" % (self.new_asset.asset_type, self.new_asset.sn),
+                                            name='%s: %s' % (self.new_asset.asset_type, self.new_asset.sn),
                                             sn=self.new_asset.sn,
                                             approved_by=self.request.user,
                                             )
@@ -170,7 +170,7 @@ class ApproveAsset(object):
         :param asset:
         :return:
         """
-        nic_list = self.data.get("nic")
+        nic_list = self.data.get('nic')
         if not nic_list:
             return
 
