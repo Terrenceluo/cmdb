@@ -35,7 +35,7 @@ class ApproveAsset(object):
         self.new_asset = models.NewAssetApprovalZone.objects.get(id=asset_id)
         self.data = self.new_asset.data
 
-    def upline_asset(self):
+    def asset_upline(self):
         # 为以后的其它类型资产扩展留下接口
         func = getattr(self, '_%s_upline' % self.new_asset.asset_type)
         ret = func()
