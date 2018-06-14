@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 17:31+0800\n"
+"POT-Creation-Date: 2018-06-14 10:08+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,6 +22,589 @@ msgstr ""
 msgid "Assets"
 msgstr "公司资产"
 
+#: assets/models.py:12 assets/models.py:93 assets/models.py:388
+msgid "Server"
+msgstr "服务器"
+
+#: assets/models.py:13 assets/models.py:166 assets/models.py:389
+msgid "Network device"
+msgstr "网络设备"
+
+#: assets/models.py:14 assets/models.py:135 assets/models.py:390
+msgid "Storage device"
+msgstr "存储设备"
+
+#: assets/models.py:15 assets/models.py:114 assets/models.py:391
+msgid "Security device"
+msgstr "安全设备"
+
+#: assets/models.py:20
+msgid "Online"
+msgstr "在线"
+
+#: assets/models.py:21
+msgid "Offline"
+msgstr "下线"
+
+#: assets/models.py:22
+msgid "Unknown"
+msgstr "未知"
+
+#: assets/models.py:23
+msgid "Breakdown"
+msgstr "故障"
+
+#: assets/models.py:24
+msgid "Spare"
+msgstr "备用"
+
+#: assets/models.py:28 assets/models.py:396
+#, fuzzy
+#| msgid "Assets"
+msgid "Asset type"
+msgstr "公司资产"
+
+#: assets/models.py:29
+#, fuzzy
+#| msgid "Assets"
+msgid "Asset name"
+msgstr "公司资产"
+
+#: assets/models.py:30 assets/models.py:386
+msgid "Asset serial number"
+msgstr "资产序列号"
+
+#: assets/models.py:31
+msgid "Business unit"
+msgstr "所属业务线"
+
+#: assets/models.py:32
+msgid "Device status"
+msgstr "设备状态"
+
+#: assets/models.py:34 assets/models.py:215 assets/models.py:398
+msgid "Manufacturer"
+msgstr "厂商"
+
+#: assets/models.py:35
+msgid "Manage IP"
+msgstr "管理IP"
+
+#: assets/models.py:36 assets/models.py:263
+msgid "Tag"
+msgstr "标签"
+
+#: assets/models.py:37
+msgid "Asset admin"
+msgstr "资产管理员"
+
+#: assets/models.py:38 assets/models.py:201 assets/models.py:202
+#: assets/models.py:392
+msgid "IDC"
+msgstr "机房"
+
+#: assets/models.py:39 assets/models.py:250
+msgid "Contract"
+msgstr "合同"
+
+#: assets/models.py:41
+msgid "Purchase day"
+msgstr "购买日期"
+
+#: assets/models.py:42
+msgid "Expire day"
+msgstr "过保日期"
+
+#: assets/models.py:43
+msgid "Price"
+msgstr "价格"
+
+#: assets/models.py:45
+msgid "Approver"
+msgstr "批准人"
+
+#: assets/models.py:48 assets/models.py:195 assets/models.py:209
+#: assets/models.py:223 assets/models.py:237 assets/models.py:374
+msgid "Memo"
+msgstr "备注"
+
+#: assets/models.py:49
+msgid "Approval date"
+msgstr "批准日期"
+
+#: assets/models.py:50 assets/models.py:244
+msgid "Modify date"
+msgstr "更新日期"
+
+#: assets/models.py:56
+msgid "Asset summary statement"
+msgstr "资产总表"
+
+#: assets/models.py:57
+msgid "Asset summary statements"
+msgstr "资产总表"
+
+#: assets/models.py:64
+msgid "PC Server"
+msgstr "PC服务器"
+
+#: assets/models.py:65
+msgid "Blade"
+msgstr "刀片机"
+
+#: assets/models.py:66
+msgid "Minicomputer"
+msgstr "小型机"
+
+#: assets/models.py:70
+msgid "Automatically add"
+msgstr "自动添加"
+
+#: assets/models.py:71
+msgid "Manual input"
+msgstr "手工录入"
+
+#: assets/models.py:76
+msgid "Server type"
+msgstr "服务器类型"
+
+#: assets/models.py:78
+msgid "Add mode"
+msgstr "添加方式"
+
+#: assets/models.py:81
+msgid "Host"
+msgstr "宿主机"
+
+#: assets/models.py:82
+msgid "Server model"
+msgstr "服务器型号"
+
+#: assets/models.py:83
+msgid "Raid type"
+msgstr "Raid类型"
+
+#: assets/models.py:85 assets/models.py:405
+msgid "OS type"
+msgstr "操作系统类型"
+
+#: assets/models.py:86 assets/models.py:404
+msgid "OS distribution"
+msgstr "发行版本"
+
+#: assets/models.py:87 assets/models.py:406
+msgid "OS release"
+msgstr "操作系统版本"
+
+#: assets/models.py:94
+msgid "Servers"
+msgstr "服务器"
+
+#: assets/models.py:100
+msgid "Fire wall"
+msgstr "防火墙"
+
+#: assets/models.py:101
+msgid "Intrusion detection device"
+msgstr "入侵检测设备"
+
+#: assets/models.py:102
+msgid "Internet gateway"
+msgstr "互联网网关"
+
+#: assets/models.py:103
+msgid "SSA"
+msgstr "运维审计系统"
+
+#: assets/models.py:108
+msgid "Security device type"
+msgstr "安全设备类型"
+
+#: assets/models.py:115
+msgid "Security devices"
+msgstr "安全设备"
+
+#: assets/models.py:121
+msgid "Disk array"
+msgstr "磁盘阵列"
+
+#: assets/models.py:122
+msgid "Network memorizer"
+msgstr "网络存储器"
+
+#: assets/models.py:123
+msgid "Tape library"
+msgstr "磁带库"
+
+#: assets/models.py:124
+msgid "Tape streamer"
+msgstr "磁带机"
+
+#: assets/models.py:129
+msgid "Storage device type"
+msgstr "存储设备类型"
+
+#: assets/models.py:136
+msgid "Storage devices"
+msgstr "存储设备"
+
+#: assets/models.py:142
+msgid "Router"
+msgstr "路由器"
+
+#: assets/models.py:143
+msgid "Switches"
+msgstr "交换机"
+
+#: assets/models.py:144
+msgid "Load balancing"
+msgstr "负载均衡"
+
+#: assets/models.py:145
+msgid "VPN device"
+msgstr "VPN设备"
+
+#: assets/models.py:150
+msgid "Network device type"
+msgstr "网络设备类型"
+
+#: assets/models.py:153
+msgid "VLanIP"
+msgstr "局域网 IP"
+
+#: assets/models.py:154
+msgid "Intranet IP"
+msgstr "内网IP"
+
+#: assets/models.py:156
+msgid "Network device model"
+msgstr "网络设备型号"
+
+#: assets/models.py:158
+msgid "Device firmware edition"
+msgstr "设备固件版本"
+
+#: assets/models.py:159
+msgid "Port number"
+msgstr "端口个数"
+
+#: assets/models.py:160
+msgid "Detailed configuration"
+msgstr "详细配置"
+
+#: assets/models.py:167
+msgid "Network devices"
+msgstr "网络设备"
+
+#: assets/models.py:173
+msgid "OS"
+msgstr "操作系统"
+
+#: assets/models.py:174
+msgid "Office/Development software"
+msgstr "办公/开发软件"
+
+#: assets/models.py:175
+msgid "Business software"
+msgstr "业务软件"
+
+#: assets/models.py:179
+msgid "Software type"
+msgstr "软件类型"
+
+#: assets/models.py:180 assets/models.py:242
+msgid "License number"
+msgstr "授权数量"
+
+#: assets/models.py:182
+msgid "Software/OS release"
+msgstr "软件/系统版本"
+
+#: assets/models.py:188 assets/models.py:189
+msgid "Software/OS"
+msgstr "软件/系统"
+
+#: assets/models.py:194
+msgid "IDC name"
+msgstr "机房名称"
+
+#: assets/models.py:207
+msgid "Manufacturer name"
+msgstr "厂商名称"
+
+#: assets/models.py:208
+msgid "Support telephone"
+msgstr "支持电话"
+
+#: assets/models.py:216
+msgid "Manufacturers"
+msgstr "厂商"
+
+#: assets/models.py:222 assets/models.py:229
+msgid "Line of business"
+msgstr "业务线"
+
+#: assets/models.py:230
+msgid "Line of businesses"
+msgstr "业务线"
+
+#: assets/models.py:235
+msgid "Contract number"
+msgstr "合同号"
+
+#: assets/models.py:236
+msgid "Contract name"
+msgstr "合同名称"
+
+#: assets/models.py:238
+msgid "Contract price"
+msgstr "合同金额"
+
+#: assets/models.py:239
+msgid "Contract detail"
+msgstr "合同详细"
+
+#: assets/models.py:240
+msgid "Start date"
+msgstr "开始日期"
+
+#: assets/models.py:241
+msgid "End date"
+msgstr "失效日期"
+
+#: assets/models.py:243 assets/models.py:257
+msgid "Create date"
+msgstr "创建日期"
+
+#: assets/models.py:251
+msgid "Contracts"
+msgstr "合同"
+
+#: assets/models.py:256
+msgid "Tag name"
+msgstr "标签名"
+
+#: assets/models.py:264
+msgid "Tags"
+msgstr "标签"
+
+#: assets/models.py:270 assets/models.py:401
+msgid "CPU model"
+msgstr "处理器型号"
+
+#: assets/models.py:271 assets/models.py:402
+msgid "CPU count"
+msgstr "物理处理器个数"
+
+#: assets/models.py:272 assets/models.py:403
+msgid "CPU core count"
+msgstr "处理器核数"
+
+#: assets/models.py:278 assets/models.py:279
+msgid "CPU"
+msgstr "处理器"
+
+#: assets/models.py:285
+msgid "Serial number"
+msgstr "序列号"
+
+#: assets/models.py:286
+msgid "RAM model"
+msgstr "内存型号"
+
+#: assets/models.py:287
+msgid "RAM manufacturer"
+msgstr "内存制造商"
+
+#: assets/models.py:288
+msgid "Slot"
+msgstr "插槽"
+
+#: assets/models.py:289 assets/models.py:315
+msgid "Capacity"
+msgstr "内存大小(GB)"
+
+#: assets/models.py:295 assets/models.py:296
+msgid "RAM"
+msgstr "内存"
+
+#: assets/models.py:303
+msgid "SATA"
+msgstr "串口硬盘"
+
+#: assets/models.py:304
+msgid "SAS"
+msgstr "SAS硬盘"
+
+#: assets/models.py:305
+msgid "SCSI"
+msgstr "SCSI硬盘"
+
+#: assets/models.py:306
+msgid "SSD"
+msgstr "固态硬盘"
+
+#: assets/models.py:307
+msgid "unknown"
+msgstr "未知"
+
+#: assets/models.py:311
+msgid "Disk serial number"
+msgstr "硬盘序列号"
+
+#: assets/models.py:312
+msgid "Location of the slot"
+msgstr "所在插槽位"
+
+#: assets/models.py:313
+msgid "Disk model"
+msgstr "磁盘型号"
+
+#: assets/models.py:314
+msgid "Disk manufacturer"
+msgstr "磁盘制造商"
+
+#: assets/models.py:316
+msgid "Interface type"
+msgstr "接口类型"
+
+#: assets/models.py:323
+msgid "Disk"
+msgstr "硬盘"
+
+#: assets/models.py:324
+msgid "Disks"
+msgstr "硬盘"
+
+#: assets/models.py:331
+msgid "NIC name"
+msgstr "网卡名称"
+
+#: assets/models.py:332
+msgid "NIC model"
+msgstr "网卡型号"
+
+#: assets/models.py:333
+msgid "Mac address"
+msgstr "MAC地址"
+
+#: assets/models.py:334
+msgid "IP address"
+msgstr "IP地址"
+
+#: assets/models.py:335
+msgid "Net mask"
+msgstr "掩码"
+
+#: assets/models.py:336
+msgid "Bonding address"
+msgstr "绑定地址"
+
+#: assets/models.py:342 assets/models.py:343
+msgid "NIC"
+msgstr "网卡"
+
+#: assets/models.py:353
+msgid "Event name"
+msgstr "事件名称"
+
+#: assets/models.py:355
+msgid "other"
+msgstr "其它"
+
+#: assets/models.py:356
+msgid "Hardware change"
+msgstr "硬件变更"
+
+#: assets/models.py:357
+msgid "Add accessory"
+msgstr "新增配件"
+
+#: assets/models.py:358
+msgid "Device offline"
+msgstr "设备下线"
+
+#: assets/models.py:359
+msgid "Device online"
+msgstr "设备上线"
+
+#: assets/models.py:360
+msgid "Serviced regularly"
+msgstr "定期维护"
+
+#: assets/models.py:361
+msgid "Business online/update/modify"
+msgstr "业务上线/更新/变更"
+
+#: assets/models.py:367
+msgid "Event type"
+msgstr "事件类型"
+
+#: assets/models.py:368
+msgid "Event subitem"
+msgstr "事件子项"
+
+#: assets/models.py:369
+msgid "Event detail"
+msgstr "事件详情"
+
+#: assets/models.py:370
+msgid "Event date"
+msgstr "事件时间"
+
+#: assets/models.py:372
+msgid "Event executor"
+msgstr "事件执行人"
+
+#: assets/models.py:380
+msgid "Event log"
+msgstr "事件纪录"
+
+#: assets/models.py:381
+msgid "Event logs"
+msgstr "事件纪录"
+
+#: assets/models.py:393
+msgid "Asset software"
+msgstr "软件资产"
+
+#: assets/models.py:399
+msgid "Model"
+msgstr "型号"
+
+#: assets/models.py:400
+msgid "RAM size"
+msgstr "内存大小"
+
+#: assets/models.py:408
+msgid "Asset data"
+msgstr "资产数据"
+
+#: assets/models.py:410
+msgid "Report date"
+msgstr "汇报日期"
+
+#: assets/models.py:411
+msgid "Data modify date"
+msgstr "数据更新日期"
+
+#: assets/models.py:412
+msgid "Whether or not to approve"
+msgstr "是否批准"
+
+#: assets/models.py:418
+msgid "New online to approve asset"
+msgstr "新上线待批准资产"
+
+#: assets/models.py:419
+msgid "New online to approve assets"
+msgstr "新上线待批准资产"
+
 #: assets/views.py:14
-msgid "Test"
-msgstr "测试"
+msgid "Receive data successfully"
+msgstr "接收数据成功"
+
+#: assets/views.py:16
+msgid "Only post method"
+msgstr "只接收 POST 方法"
+
