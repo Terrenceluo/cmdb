@@ -110,6 +110,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-hans'
 
+LANGUAGES = (
+    ('en', ('English')),
+    ('zh-hans', ('中文简体')),
+    ('zh-hant', ('中文繁體')),
+)
+
 # 翻译文件所在目录，需要手工创建
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
