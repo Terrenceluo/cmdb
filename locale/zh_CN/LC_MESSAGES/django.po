@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-14 13:31+0800\n"
+"POT-Creation-Date: 2018-06-14 14:41+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: assets/admin.py:28
+msgid "Success to approve"
+msgstr "成功批准"
+
+#: assets/admin.py:28
+msgid "new assets upline"
+msgstr "条新资产上线"
+
+#: assets/admin.py:30
+msgid "Approve selected new assets"
+msgstr "批准选择的新资产"
+
 #: assets/apps.py:10
 msgid "Assets"
 msgstr "公司资产"
 
-#: assets/asset_handler.py:32
+#: assets/asset_handler.py:16
+msgid "upline"
+msgstr "上线"
+
+#: assets/asset_handler.py:18
+msgid "Asset upline successfully"
+msgstr "资产成功上线"
+
+#: assets/asset_handler.py:21 assets/asset_handler.py:23
+msgid "Failure to approve"
+msgstr "审批失败"
+
+#: assets/asset_handler.py:63
+msgid "New Server upline"
+msgstr "新服务器上线"
+
+#: assets/asset_handler.py:132
+msgid "Unknown RAM slot"
+msgstr "未知的内存插槽"
+
+#: assets/asset_handler.py:154
+msgid "Unknown serial number disk"
+msgstr "未知序列号的硬盘"
+
+#: assets/asset_handler.py:179
+msgid "NIC is missing mac address"
+msgstr "网卡缺少mac地址"
+
+#: assets/asset_handler.py:181
+msgid "Unknown NIC model"
+msgstr "未知的网卡型号"
+
+#: assets/asset_handler.py:225
 msgid "Asset has add or updated pending approval area"
 msgstr "资产已经加入或更新待审批区"
 
