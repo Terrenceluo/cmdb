@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-14 12:58+0800\n"
+"POT-Creation-Date: 2018-06-14 13:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,10 @@ msgstr ""
 #: assets/apps.py:10
 msgid "Assets"
 msgstr "公司资产"
+
+#: assets/asset_handler.py:32
+msgid "Asset has add or updated pending approval area"
+msgstr "资产已经加入或更新待审批区"
 
 #: assets/models.py:12 assets/models.py:93 assets/models.py:388
 msgid "Server"
@@ -58,16 +62,12 @@ msgid "Spare"
 msgstr "备用"
 
 #: assets/models.py:28 assets/models.py:396
-#, fuzzy
-#| msgid "Assets"
 msgid "Asset type"
-msgstr "公司资产"
+msgstr "资产类型"
 
 #: assets/models.py:29
-#, fuzzy
-#| msgid "Assets"
 msgid "Asset name"
-msgstr "公司资产"
+msgstr "资产名称"
 
 #: assets/models.py:30 assets/models.py:386
 msgid "Asset serial number"
@@ -599,10 +599,22 @@ msgstr "新上线待批准资产"
 msgid "New online to approve assets"
 msgstr "新上线待批准资产"
 
-#: assets/views.py:14
-msgid "Receive data successfully"
-msgstr "接收数据成功"
+#: assets/views.py:26
+msgid "Data not found"
+msgstr "没有数据"
 
-#: assets/views.py:16
+#: assets/views.py:28
+msgid "Data must be dict"
+msgstr "数据必须为字典格式"
+
+#: assets/views.py:38
+msgid "Asset data has updated"
+msgstr "资产数据已经更新"
+
+#: assets/views.py:44
+msgid "Serial number not found, please check data"
+msgstr "没有资产序列号，请检查数据"
+
+#: assets/views.py:46
 msgid "Only post method"
 msgstr "只接收 POST 方法"
