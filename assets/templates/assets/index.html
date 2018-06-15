@@ -71,6 +71,9 @@
                   {% elif asset.asset_type == "securitydevice" %}
                       <td class="text-red text-bold">{{ asset.get_asset_type_display }}</td>
                       <td>{{ asset.securitydevice.get_sub_asset_type_display }}</td>
+                  {% elif asset.asset_type == "software" %}
+                      <td class="text-red text-bold">{{ asset.get_asset_type_display }}</td>
+                      <td>{{ asset.software.get_sub_asset_type_display }}</td>
                   {% endif %}
                     {% if asset.asset_type == 'server' %}
                         <td><a href="{% url 'assets:detail' asset.id %}">{{ asset.name }}</a></td>
