@@ -164,7 +164,7 @@ class ApproveAsset(object):
             disk.asset = asset
             disk.sn = disk_dict.get('sn')
             disk.model = disk_dict.get('model')
-            disk.manufacturer = disk_dict.get('manufacturer'),
+            disk.manufacturer = disk_dict.get('manufacturer')
             disk.slot = disk_dict.get('slot')
             disk.capacity = disk_dict.get('capacity', 0)
             iface = disk_dict.get('iface_type')

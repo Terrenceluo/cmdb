@@ -61,7 +61,7 @@
                     <td>{{ asset.get_asset_type_display }}</td>
                     <td>{{ asset.sn }}</td>
                     <td>{{ asset.business_unit|default:'N/A' }}</td>
-                    <td>{{ asset.manufacturer.name|default:'N/A' }}</td>
+                    <td>{{ asset.manufacturer|default:'N/A' }}</td>
                     <td>{{ asset.manage_ip|default:'N/A' }}</td>
                     <td>{{ asset.idc|default:'N/A' }}</td>
                     <td>
