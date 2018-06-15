@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-14 14:41+0800\n"
+"POT-Creation-Date: 2018-06-15 10:36+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,27 +45,47 @@ msgstr "资产成功上线"
 msgid "Failure to approve"
 msgstr "审批失败"
 
-#: assets/asset_handler.py:63
+#: assets/asset_handler.py:26
+msgid "data update"
+msgstr "数据更新"
+
+#: assets/asset_handler.py:28
+msgid "update successfully"
+msgstr "更新成功"
+
+#: assets/asset_handler.py:30 assets/asset_handler.py:32
+msgid "update failed"
+msgstr "更新失败"
+
+#: assets/asset_handler.py:71
 msgid "New Server upline"
 msgstr "新服务器上线"
 
-#: assets/asset_handler.py:132
+#: assets/asset_handler.py:140
 msgid "Unknown RAM slot"
 msgstr "未知的内存插槽"
 
-#: assets/asset_handler.py:154
+#: assets/asset_handler.py:162
 msgid "Unknown serial number disk"
 msgstr "未知序列号的硬盘"
 
-#: assets/asset_handler.py:179
+#: assets/asset_handler.py:187
 msgid "NIC is missing mac address"
 msgstr "网卡缺少mac地址"
 
-#: assets/asset_handler.py:181
+#: assets/asset_handler.py:189
 msgid "Unknown NIC model"
 msgstr "未知的网卡型号"
 
-#: assets/asset_handler.py:225
+#: assets/asset_handler.py:244 assets/views.py:38
+msgid "Asset data has updated"
+msgstr "资产数据已经更新"
+
+#: assets/asset_handler.py:393
+msgid "Update successfully"
+msgstr "更新成功"
+
+#: assets/asset_handler.py:417
 msgid "Asset has add or updated pending approval area"
 msgstr "资产已经加入或更新待审批区"
 
@@ -650,10 +670,6 @@ msgstr "没有数据"
 #: assets/views.py:28
 msgid "Data must be dict"
 msgstr "数据必须为字典格式"
-
-#: assets/views.py:38
-msgid "Asset data has updated"
-msgstr "资产数据已经更新"
 
 #: assets/views.py:44
 msgid "Serial number not found, please check data"
