@@ -175,6 +175,7 @@ class Software(models.Model):
         (2, _('Business software')),  # 业务软件
     )
 
+    asset = models.OneToOneField('Asset')
     sub_asset_type = models.SmallIntegerField(choices=sub_asset_type_choice, default=0,
                                               verbose_name=_('Software type'))  # 软件类型
     license_num = models.IntegerField(default=1, verbose_name=_('License number'))  # 授权数量
