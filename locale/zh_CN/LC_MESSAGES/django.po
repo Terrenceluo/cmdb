@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-15 20:04-0700\n"
+"POT-Creation-Date: 2018-06-16 12:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,30 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: account/apps.py:10
+msgid "account"
+msgstr "账户"
+
+#: account/models.py:18
+msgid "User"
+msgstr "用户"
+
+#: account/models.py:20
+msgid "Profile photo"
+msgstr "头像"
+
+#: account/models.py:21 assets/models.py:244 assets/models.py:258
+msgid "Create date"
+msgstr "创建日期"
+
+#: account/models.py:27
+msgid "User profile"
+msgstr "账户"
+
+#: account/models.py:28
+msgid "User profiles"
+msgstr "账户"
 
 #: assets/admin.py:28
 msgid "Success to approve"
@@ -439,10 +463,6 @@ msgstr "开始日期"
 msgid "End date"
 msgstr "失效日期"
 
-#: assets/models.py:244 assets/models.py:258
-msgid "Create date"
-msgstr "创建日期"
-
 #: assets/models.py:252
 msgid "Contracts"
 msgstr "合同"
@@ -678,3 +698,7 @@ msgstr "没有资产序列号，请检查数据"
 #: assets/views.py:47
 msgid "Only post method"
 msgstr "只接收 POST 方法"
+
+#: help/file_upload_help.py:8
+msgid "File too large. Size should not exceed 2 MiB."
+msgstr "文件过大。文件的大小不得超过2M"
