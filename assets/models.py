@@ -13,7 +13,7 @@ class Asset(models.Model):
         ('networkdevice', _('Network device')),  # 网络设备
         ('storagedevice', _('Storage device')),  # 存储设备
         ('securitydevice', _('Security device')),  # 安全设备
-        ('software', u'软件资产'),
+        ('software', _('Asset software')),  # 软件资产
     )
 
     asset_status = (

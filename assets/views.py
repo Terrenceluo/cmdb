@@ -48,7 +48,7 @@ def report(request):
 
 
 def index(request):
-    assets = models.Asset.objects.all()
+    assets = models.Asset.objects.exclude(asset_type='software').all()
     return render(request, 'assets/index.html', locals())
 
 
