@@ -16,13 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from api.urls import oauth2_endpoint_views
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('accounts.urls'), name='accounts'),
     url(r'^assets/', include('assets.urls', namespace='assets')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^api/', include('api.urls', namespace='api')),
-    url(r'^o/', include(oauth2_endpoint_views, namespace="oauth2_provider")),
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
