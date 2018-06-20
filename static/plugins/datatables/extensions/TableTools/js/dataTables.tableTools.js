@@ -2532,7 +2532,7 @@ TableTools.prototype = {
 
 
 	/**
-	 * Take account of scrolling in DataTables by showing the full table
+	 * Take accounts of scrolling in DataTables by showing the full table
 	 *  @returns void
 	 *  @private 
 	 */
@@ -2589,7 +2589,7 @@ TableTools.prototype = {
 
 
 	/**
-	 * Take account of scrolling in DataTables by showing the full table. Note that the redraw of
+	 * Take accounts of scrolling in DataTables by showing the full table. Note that the redraw of
 	 * the DataTable that we do will actually deal with the majority of the hard work here
 	 *  @returns void
 	 *  @private 

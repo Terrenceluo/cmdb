@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: account/apps.py:10
-msgid "account"
+msgid "accounts"
 msgstr "账户"
 
 #: account/models.py:18

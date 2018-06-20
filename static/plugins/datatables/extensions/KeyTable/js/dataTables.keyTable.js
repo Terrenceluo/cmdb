@@ -504,7 +504,7 @@ KeyTable = function ( oInit )
 			iWidth = nTarget.offsetWidth;
 			aiPos = _fnGetPos( nTarget );
 
-			/* Take account of scrolling in DataTables 1.7 - remove scrolling since that would add to
+			/* Take accounts of scrolling in DataTables 1.7 - remove scrolling since that would add to
 			 * the positioning calculation
 			 */
 			if ( _oDatatable && typeof oSettings.oScroll != 'undefined' &&
@@ -539,7 +539,7 @@ KeyTable = function ( oInit )
 			}
 		}
 
-		/* Take account of scrolling in DataTables 1.7 */
+		/* Take accounts of scrolling in DataTables 1.7 */
 		if ( _oDatatable && typeof oSettings.oScroll != 'undefined' &&
 		  (oSettings.oScroll.sX !== "" || oSettings.oScroll.sY !== "") )
 		{

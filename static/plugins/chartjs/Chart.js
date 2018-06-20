@@ -1488,7 +1488,7 @@
 			this.ctx.font = this.titleFont;
 
 			var titleWidth = this.ctx.measureText(this.title).width,
-				//Label has a legend square as well so account for this.
+				//Label has a legend square as well so accounts for this.
 				labelWidth = longestText(this.ctx,this.font,this.labels) + this.fontSize + 3,
 				longestTextWidth = max([labelWidth,titleWidth]);
 
@@ -1843,7 +1843,7 @@
 			this.drawingArea = (this.display) ? (this.size/2) - (this.fontSize/2 + this.backdropPaddingY) : (this.size/2);
 		},
 		calculateCenterOffset: function(value){
-			// Take into account half font size + the yPadding of the top value
+			// Take into accounts half font size + the yPadding of the top value
 			var scalingFactor = this.drawingArea / (this.max - this.min);
 
 			return (value - this.min) * scalingFactor;

@@ -225,7 +225,7 @@ Responsive.prototype = {
 
 		// Control column needs to always be included. This makes it sub-
 		// optimal in terms of using the available with, but to stop layout
-		// thrashing or overflow. Also we need to account for the control column
+		// thrashing or overflow. Also we need to accounts for the control column
 		// width first so we know how much width is available for the other
 		// columns, since the control column might not be the first one shown
 		for ( i=0, ien=display.length ; i<ien ; i++ ) {

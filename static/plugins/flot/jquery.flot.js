@@ -2539,7 +2539,7 @@ Licensed under the MIT license.
                 top = y + barLeft;
                 bottom = y + barRight;
 
-                // account for negative bars
+                // accounts for negative bars
                 if (right < left) {
                     tmp = right;
                     right = left;
@@ -2556,7 +2556,7 @@ Licensed under the MIT license.
                 bottom = b;
                 top = y;
 
-                // account for negative bars
+                // accounts for negative bars
                 if (top < bottom) {
                     tmp = top;
                     top = bottom;

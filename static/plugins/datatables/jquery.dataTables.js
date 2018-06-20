@@ -779,7 +779,7 @@
 	
 	
 	/**
-	 * Covert the index of a visible column to the index in the data array (take account
+	 * Covert the index of a visible column to the index in the data array (take accounts
 	 * of hidden columns)
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {int} iMatch Visible column index to lookup
@@ -798,7 +798,7 @@
 	
 	/**
 	 * Covert the index of an index in the data array and convert it to the visible
-	 *   column index (take account of hidden columns)
+	 *   column index (take accounts of hidden columns)
 	 *  @param {int} iMatch Column index to lookup
 	 *  @param {object} oSettings dataTables settings object
 	 *  @returns {int} i the data index
@@ -1095,7 +1095,7 @@
 	
 	
 	/**
-	 * Get the data for a given cell from the internal cache, taking into account data mapping
+	 * Get the data for a given cell from the internal cache, taking into accounts data mapping
 	 *  @param {object} settings dataTables settings object
 	 *  @param {int} rowIdx aoData row id
 	 *  @param {int} colIdx Column index
@@ -1168,7 +1168,7 @@
 	var __reFn = /\(\)$/;
 	
 	/**
-	 * Split string on periods, taking into account escaped periods
+	 * Split string on periods, taking into accounts escaped periods
 	 * @param  {string} str String to split
 	 * @return {array} Split string
 	 */
@@ -1182,7 +1182,7 @@
 	
 	/**
 	 * Return a function that can be used to get data from a source object, taking
-	 * into account the ability to use nested objects as a source
+	 * into accounts the ability to use nested objects as a source
 	 *  @param {string|int|function} mSource The data source for the object
 	 *  @returns {function} Data get function
 	 *  @memberof DataTable#oApi
@@ -1305,7 +1305,7 @@
 	
 	/**
 	 * Return a function that can be used to set data from a source object, taking
-	 * into account the ability to use nested objects as a source
+	 * into accounts the ability to use nested objects as a source
 	 *  @param {string|int|function} mSource The data source for the object
 	 *  @returns {function} Data set function
 	 *  @memberof DataTable#oApi
@@ -2090,7 +2090,7 @@
 	
 	
 	/**
-	 * Redraw the table - taking account of the various features which are enabled
+	 * Redraw the table - taking accounts of the various features which are enabled
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {boolean} [holdPosition] Keep the current paging position. By default
 	 *    the paging is reset to the first page
@@ -2393,7 +2393,7 @@
 	}
 	
 	/**
-	 * Create an Ajax call based on the table's settings, taking into account that
+	 * Create an Ajax call based on the table's settings, taking into accounts that
 	 * parameters can have multiple forms, and backwards compatibility.
 	 *
 	 * @param {object} oSettings dataTables settings object
@@ -2961,7 +2961,7 @@
 		var displayMaster = settings.aiDisplayMaster;
 		var display, invalidated, i;
 	
-		// Need to take account of custom filtering functions - always filter
+		// Need to take accounts of custom filtering functions - always filter
 		if ( DataTable.ext.search.length !== 0 ) {
 			force = true;
 		}
@@ -3866,7 +3866,7 @@
 	
 			// IE7 will make the width of the table when 100% include the scrollbar
 			// - which is shouldn't. When there is a scrollbar we need to take this
-			// into account.
+			// into accounts.
 			if ( ie67 && (table.find('tbody').height() > divBodyEl.offsetHeight ||
 				divBody.css('overflow-y') == "scroll")
 			) {
@@ -3881,10 +3881,10 @@
 				tableStyle.width = _fnStringToCss(scrollXInner);
 			}
 			else if ( sanityWidth == divBody.width() && divBody.height() < table.height() ) {
-				// There is y-scrolling - try to take account of the y scroll bar
+				// There is y-scrolling - try to take accounts of the y scroll bar
 				tableStyle.width = _fnStringToCss( sanityWidth-barWidth );
 				if ( table.outerWidth() > sanityWidth-barWidth ) {
-					// Not possible to take account of it
+					// Not possible to take accounts of it
 					tableStyle.width = _fnStringToCss( sanityWidth );
 				}
 			}
@@ -4203,7 +4203,7 @@
 				tmpTable.width( tableWidthAttr );
 			}
 	
-			// Take into account the y scrollbar
+			// Take into accounts the y scrollbar
 			_fnScrollingWidthAdjust( oSettings, tmpTable[0] );
 	
 			// Browsers need a bit of a hand when a width is assigned to any columns
@@ -4334,7 +4334,7 @@
 	
 	
 	/**
-	 * Adjust a table's width to take account of vertical scroll bar
+	 * Adjust a table's width to take accounts of vertical scroll bar
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {node} n table node
 	 *  @memberof DataTable#oApi
@@ -5133,7 +5133,7 @@
 	 *      references
 	 *  @returns {object} out Reference, just for convenience - out === the return.
 	 *  @memberof DataTable#oApi
-	 *  @todo This doesn't take account of arrays inside the deep copied objects.
+	 *  @todo This doesn't take accounts of arrays inside the deep copied objects.
 	 */
 	function _fnExtend( out, extender, breakRefs )
 	{
@@ -5653,7 +5653,7 @@
 		this.fnDraw = function( complete )
 		{
 			// Note that this isn't an exact match to the old call to _fnDraw - it takes
-			// into account the new data, but can hold position.
+			// into accounts the new data, but can hold position.
 			this.api( true ).draw( complete );
 		};
 		
@@ -6309,7 +6309,7 @@
 			
 			if ( oSettings.iInitDisplayStart === undefined )
 			{
-				/* Display start point, taking into account the save saving */
+				/* Display start point, taking into accounts the save saving */
 				oSettings.iInitDisplayStart = oInit.iDisplayStart;
 				oSettings._iDisplayStart = oInit.iDisplayStart;
 			}
@@ -6465,7 +6465,7 @@
 			}
 			
 			/* Do a first pass on the sorting classes (allows any size changes to be taken into
-			 * account, and also will apply sorting disabled classes if disabled
+			 * accounts, and also will apply sorting disabled classes if disabled
 			 */
 			_fnSortingClasses( oSettings );
 			
@@ -10135,7 +10135,7 @@
 		 * Retrieve the DataTables object for the given selector. Note that if the
 		 * table has already been initialised, this parameter will cause DataTables
 		 * to simply return the object that has already been set up - it will not take
-		 * account of any changes you might have made to the initialisation object
+		 * accounts of any changes you might have made to the initialisation object
 		 * passed to DataTables (setting this parameter to true is an acknowledgement
 		 * that you understand this). `destroy` can be used to reinitialise a table if
 		 * you need.
@@ -11745,7 +11745,7 @@
 	DataTable.defaults.column = {
 		/**
 		 * Define which column(s) an order will occur on for this column. This
-		 * allows a column's ordering to take multiple columns into account when
+		 * allows a column's ordering to take multiple columns into accounts when
 		 * doing a sort or use the data from a different column. For example first
 		 * name / last name columns make sense to do a multi-column sort over the
 		 * two columns.

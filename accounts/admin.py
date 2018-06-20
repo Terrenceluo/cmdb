@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from account import models
+from accounts import models
 
 
 @admin.register(models.UserProfile)

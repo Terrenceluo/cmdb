@@ -222,7 +222,7 @@ $.fn.dataTableExt.oApi.fnColReorder = function ( oSettings, iFrom, iTo )
 	if ( oSettings.aoColumns[iFrom].bVisible )
 	{
 		/* Calculate the current visible index and the point to insert the node before. The insert
-		 * before needs to take into account that there might not be an element to insert before,
+		 * before needs to take into accounts that there might not be an element to insert before,
 		 * in which case it will be null, and an appendChild should be used
 		 */
 		var iVisibleIndex = this.oApi._fnColumnIndexToVisible( oSettings, iFrom );

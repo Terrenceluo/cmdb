@@ -487,7 +487,7 @@ function matchCellWidths(els) {
 
 // Turns a container element into a scroller if its contents is taller than the allotted height.
 // Returns true if the element is now a scroller, false otherwise.
-// NOTE: this method is best because it takes weird zooming dimensions into account
+// NOTE: this method is best because it takes weird zooming dimensions into accounts
 function setPotentialScroller(containerEl, height) {
 	containerEl.height(height).addClass('fc-scroller');
 
@@ -6296,7 +6296,7 @@ var View = fc.View = Class.extend({
 
 
 	// Utility for formatting a range. Accepts a range object, formatting string, and optional separator.
-	// Displays all-day ranges naturally, with an inclusive end. Takes the current isRTL into account.
+	// Displays all-day ranges naturally, with an inclusive end. Takes the current isRTL into accounts.
 	formatRange: function(range, formatStr, separator) {
 		var end = range.end;
 

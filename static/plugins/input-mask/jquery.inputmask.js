@@ -336,7 +336,7 @@
                 if (strict) {
                     var result = _isValid(pos, getActiveMaskSet(), c, strict); //only check validity in current mask when validating strict
                     if (result === true) {
-                        result = { "pos": pos }; //always take a possible corrected maskposition into account
+                        result = { "pos": pos }; //always take a possible corrected maskposition into accounts
                     }
                     return result;
                 }
@@ -361,7 +361,7 @@
                                     } else {
                                         setBufferElement(getActiveBuffer(), i, actualBuffer[i], true);
                                         if (rsltValid === true) {
-                                            rsltValid = { "pos": i }; //always take a possible corrected maskposition into account
+                                            rsltValid = { "pos": i }; //always take a possible corrected maskposition into accounts
                                         }
                                         var newValidPosition = rsltValid.pos || i;
                                         if (getActiveMaskSet()['lastValidPosition'] < newValidPosition)
@@ -386,7 +386,7 @@
                                 result = _isValid(maskPos, getActiveMaskSet(), c, strict);
                                 if (result !== false) {
                                     if (result === true) {
-                                        result = { "pos": maskPos }; //always take a possible corrected maskposition into account
+                                        result = { "pos": maskPos }; //always take a possible corrected maskposition into accounts
                                     }
                                     var newValidPosition = result.pos || maskPos;
                                     if (getActiveMaskSet()['lastValidPosition'] < newValidPosition)

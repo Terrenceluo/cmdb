@@ -31,7 +31,7 @@ Optional extensions on the jquery.inputmask base
             suffix: "",
 
             //todo
-            getMaskLength: function (buffer, greedy, repeat, currentBuffer, opts) { //custom getMaskLength to take the groupSeparator into account
+            getMaskLength: function (buffer, greedy, repeat, currentBuffer, opts) { //custom getMaskLength to take the groupSeparator into accounts
                 var calculatedLength = buffer.length;
 
                 if (!greedy) {
