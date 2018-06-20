@@ -18,9 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^accounts/', include('accounts.urls'), name='accounts'),
+    url(r'^accounts/', include('accounts.urls', namespace='accounts')),
     url(r'^assets/', include('assets.urls', namespace='assets')),
-    url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^i18n/', include('django.conf.urls.i18n', namespace='i18n')),
     url(r'^api/', include('api.urls', namespace='api')),
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
