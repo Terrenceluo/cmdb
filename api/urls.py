@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 import oauth2_provider.views as oauth2_views
 from django.conf import settings
-from django.conf.urls import url, include
+from django.conf.urls import url
 
 from api.views import ApiEndpoint
 
